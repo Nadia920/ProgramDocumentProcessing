@@ -8,7 +8,6 @@ import javax.validation.constraints.NotNull;
 
 @Getter
 @Setter
-@RequiredArgsConstructor
 @AllArgsConstructor
 @NoArgsConstructor
 public class ClassDTO {

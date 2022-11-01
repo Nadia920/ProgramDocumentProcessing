@@ -8,7 +8,6 @@ import java.util.Date;
 
 @Getter
 @Setter
-@RequiredArgsConstructor
 @AllArgsConstructor
 @NoArgsConstructor
 public class DocumentDTO {

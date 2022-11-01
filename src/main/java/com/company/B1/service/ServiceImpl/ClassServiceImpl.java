@@ -1,6 +1,5 @@
 package com.company.B1.service.ServiceImpl;
 
-import com.company.B1.controller.dto.AccountingAccountsDTO;
 import com.company.B1.controller.dto.ClassDTO;
 import com.company.B1.model.AccountingAccountsEntity;
 import com.company.B1.model.ClassEntity;
@@ -37,8 +36,8 @@ public class ClassServiceImpl implements ClassService {
 
     @Override
     public boolean save(ClassEntity obj) {
-        ClassEntity class = classRepository.save(obj);
-        if (class == null) {
+        ClassEntity classes = ClassRepository.save(obj);
+        if (classes == null) {
             return false;
         } else {
             return true;

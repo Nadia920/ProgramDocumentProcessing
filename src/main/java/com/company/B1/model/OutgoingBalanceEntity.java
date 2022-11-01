@@ -9,7 +9,6 @@ import javax.validation.constraints.NotNull;
 @Entity
 @Getter
 @Setter
-@RequiredArgsConstructor
 @AllArgsConstructor
 @NoArgsConstructor
 @Data

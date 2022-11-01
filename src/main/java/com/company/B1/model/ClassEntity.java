@@ -11,7 +11,6 @@ import java.util.Set;
 @Entity
 @Getter
 @Setter
-@RequiredArgsConstructor
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
@@ -33,5 +32,4 @@ public class ClassEntity extends BaseEntity{
     @OneToMany(mappedBy = "outgoing_balance", fetch = FetchType.EAGER)
     private Set<OutgoingBalanceEntity> outgoingBalanceEntity;
 
-    public ClassEntity(String className, DocumentEntity documentEntity) {}
 }

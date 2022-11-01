@@ -8,7 +8,6 @@ import javax.persistence.*;
 
 @Getter
 @Setter
-@RequiredArgsConstructor
 @AllArgsConstructor
 @NoArgsConstructor
 public class AccountingAccountsDTO {
