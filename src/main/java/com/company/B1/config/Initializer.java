@@ -1,8 +1,9 @@
 package com.company.B1.config;
 
+
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
-public class Initializer extends AbstractAnnotationConfigDispatcherServletInitializer{
+public class Initializer extends AbstractAnnotationConfigDispatcherServletInitializer {
     @Override
     protected Class<?>[] getRootConfigClasses() {
         return new Class[]{WebMvcConfig.class, SpringSecurityConfig.class, HibernateConfig.class};

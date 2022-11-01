@@ -14,6 +14,9 @@ import org.apache.poi.poifs.filesystem.POIFSFileSystem;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
 import java.io.FileInputStream;
 import java.util.Date;
 import java.util.List;
@@ -79,7 +82,7 @@ public class DocumentController {
             document.setDocumentDescription(cell.toString() + cell1.toString());
             row = sheet.getRow(5);
             cell = row.getCell(0);
-            document.setDateOfSubmission(new Date(cell));
+            document.setDateOfSubmission(new Date(String.valueOf(cell)));
 
 
         }

@@ -23,13 +23,15 @@ public class ClassEntity extends BaseEntity{
     @ManyToOne(optional = false, cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
     @JoinColumn(name = "document_id")
     private Long documentId;
-    @OneToMany(mappedBy = "accounting_accounts", fetch = FetchType.EAGER)
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.REMOVE , mappedBy = "accountingAccountsEntity")
     private Set<AccountingAccountsEntity> accountingAccounts;
-    @OneToMany(mappedBy = "incoming_balance", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "incomingBalanceEntity", fetch = FetchType.EAGER)
     private Set<IncomingBalanceEntity> incomingBalance;
-    @OneToMany(mappedBy = "turnovers", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "turnoversEntity", fetch = FetchType.EAGER)
     private Set<TurnoversEntity> turnoversEntity;
-    @OneToMany(mappedBy = "outgoing_balance", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "outgoingBalanceEntity", fetch = FetchType.EAGER)
     private Set<OutgoingBalanceEntity> outgoingBalanceEntity;
 
+    public ClassEntity(String className, DocumentEntity documentEntity) {
+    }
 }

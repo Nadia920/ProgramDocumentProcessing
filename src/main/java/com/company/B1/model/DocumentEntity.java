@@ -32,7 +32,7 @@ public class DocumentEntity extends BaseEntity{
     @NotNull
     @Column(name = "date_of_submission")
     private Date dateOfSubmission;
-    @OneToMany(mappedBy = "class", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "class_id", fetch = FetchType.EAGER)
     private Set<ClassEntity> classes;
 
     public DocumentEntity(String nameOrganization, String documentName, String documentDescription, Date dateOfSubmission) {}

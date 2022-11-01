@@ -30,12 +30,12 @@ public class AccountingAccountsServiceImpl implements AccountingAccountsService 
     @Override
     public void save(AccountingAccountsDTO accountingAccountsDTO) {
         AccountingAccountsEntity accountingAccountsEntity = new AccountingAccountsEntity(accountingAccountsDTO.getAccountNumber(), accountingAccountsDTO.getСomponentsAccount(), accountingAccountsDTO.getClassEntity());
-        AccountingAccountsRepository.save(accountingAccountsEntity);
+        accountingAccountsRepository.save(accountingAccountsEntity);
     }
 
     @Override
     public boolean save(AccountingAccountsEntity obj) {
-        AccountingAccountsEntity accountingAccounts = AccountingAccountsRepository.save(obj);
+        AccountingAccountsEntity accountingAccounts = accountingAccountsRepository.save(obj);
         if (accountingAccounts == null) {
             return false;
         } else {

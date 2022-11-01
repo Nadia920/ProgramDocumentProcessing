@@ -23,7 +23,7 @@ public class AccountingAccountsEntity extends BaseEntity{
     @Column(name = "сomponents_account")
     private String сomponentsAccount;
     @ManyToOne(optional = false, cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
-    @JoinColumn(name = "class_id")
+    @JoinColumn(name = "class_Id")
     private Long classId;
 
     public AccountingAccountsEntity(Integer accountNumber, String сomponentsAccount, ClassEntity classEntity) {}
